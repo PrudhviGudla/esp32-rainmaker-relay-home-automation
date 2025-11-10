@@ -83,9 +83,31 @@ The ESP RainMaker library and multi-relay code **require extra firmware space**.
    - If your WiFi network doesn't appear in the app, use "Join other network" and enter SSID/password manually (RainMaker only supports 2.4 GHz WiFi).
 3. **Device appears in app after provisioning.**
 4. **Integration with Google Home / Alexa:**
-   - In RainMaker app, link Google Home/Alexa accounts. Make sure device names in code (e.g., `Switch1`) match your intended voice commands.
-   - Test voice and app control—real-time sync is supported.
-5. **Important:** When scanning QR code via serial monitor, match the baud rate (`115200`) to the one set in code. Else, you may only see gibberish.
+
+#### Integrating with Amazon Alexa
+1. **Install and sign in to the Alexa app** on your phone (Android/iOS).
+2. **Open the ESP RainMaker app** and ensure your devices are visible and working.
+3. **Go to app settings in ESP RainMaker.**
+   - Tap the **"Settings"** gear icon.
+   - Locate and select "Voice Services."
+   - Tap **"Amazon Alexa"** and then **"Link with Amazon Alexa."**
+4. **Sign in with your ESP RainMaker credentials** when prompted.
+5. **Follow the on-screen instructions** to finish linking. The Alexa app will now automatically discover your ESP RainMaker devices.
+   - Your "Switch1", "Switch2", etc. will appear as controllable devices.
+6. **Test voice commands,** e.g., "Alexa, turn on Switch1."
+
+Tips:
+- Make sure device names in your code ("Switch1" ...) are easy to pronounce.
+- Linking must use the **same account/email** on both RainMaker and Alexa for device discovery to succeed.
+
+#### Integrating with Google Home
+1. **Install and sign in to the Google Home app** on your phone.
+2. In Google Home, **create a new Home** if you haven't already.
+3. Tap **"+" (Add)** in the top left corner and choose **Set up device → Works with Google.**
+4. In the search bar, **type "RainMaker"** and select **ESP RainMaker**.
+5. **Sign in with your ESP RainMaker account.**
+6. **Grant permissions** and complete the linking process as instructed. Your devices will be imported - you should now see them in the Google Home dashboard.
+7. **Test with "Hey Google, turn on Switch1"** or similar commands.
 
 ## Technical Details & Code Explanation
 
@@ -106,7 +128,7 @@ The ESP RainMaker library and multi-relay code **require extra firmware space**.
 - **Partition scheme errors:** If "Sketch too big," switch board type or partition scheme as described in [Step 3](#step-3-choosing-the-board--partition-scheme).
 - **Board detection/COM port:** Use CP210x driver and proper cable ([setup instructions]); if upload fails, check RESET/BOOT button procedure.[5][1]
 - **RainMaker WiFi onboarding issues:** App can't find SSID? Use manual network entry and verify you're on a 2.4 GHz WiFi network.
-- **WiFi/BLE provisioning bug:** If you see errors for undefined `WIFI_PROV_SCHEME_*` flags, update to `NETWORK_PROV_SCHEME_*` family as used in code.
+- **WiFi/BLE provisioning bug:** If you see errors for undefined `WIFI_PROV_SCHEME_*` flags, update to `NETWORK_PROV_SCHEME_*` family as used in code. This is the issue I solved in the original code from the video.
 
 ## Project Photos
 
