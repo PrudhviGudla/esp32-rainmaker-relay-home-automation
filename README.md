@@ -1,4 +1,4 @@
-# ESP32 4-Relay Home Automation via RainMaker
+# ESP32 Home Automation via RainMaker
 
 ## Table of Contents
 - [Project Overview](#project-overview)
