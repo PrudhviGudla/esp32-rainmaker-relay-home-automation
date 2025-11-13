@@ -135,9 +135,9 @@ Tips:
 
 ## Credits & Further Learning
 - Code based on 
-  - Video tutorial by Tech StudyCell: [ESP RainMaker + Manual Switch/EEPROM | YouTube](https://www.youtube.com/watch?v=AitCKcyjHuQ)
+  - Video tutorial by Tech StudyCell: [ESP RainMaker + Manual Switch/EEPROM | YouTube](https://youtu.be/PLM4MZdCLNM?si=ppOMKUoNII9rwB1q)
 - If you prefer a guided walkthrough, watch the above video.
 - For ESP32 and Arduino IDE setup step-by-step, see:
   - [RandomNerdTutorials Guide](https://randomnerdtutorials.com/installing-the-esp32-board-in-arduino-ide-windows-instructions/)
-- For technical help and bug fixes, see code comments and Common Issues and Solutions section
+- For technical help and bug fixes, see code comments and the Common Issues and Solutions section
 
